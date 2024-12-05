@@ -4,9 +4,10 @@ const _PATH_TO_SRC = joinpath(_ROOT, "src");
 const _PATH_TO_DATA = joinpath(_ROOT, "data");
 
 # check: do we have the required packahes loaded??
+"`] build FFMPEG`";
 using Pkg
 Pkg.add(path="https://github.com/varnerlab/VLQuantitativeFinancePackage.jl.git")
-Pkg.activate("."); Pkg.resolve(); Pkg.instantiate(); Pkg.update();
+Pkg.activate("."); Pkg.resolve(); Pkg.instantiate(); Pkg.update(); Pkg.build("CodecZlib");
 
 # load external packages -
 using VLQuantitativeFinancePackage;
